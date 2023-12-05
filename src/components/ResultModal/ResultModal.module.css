@@ -1,0 +1,14 @@
+.result {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: #d7fcf8;
+}
+
+.result[open] {
+    animation: slide-in-from-top 0.35s ease-out;
+}
+
+.result::backdrop {
+    background: rgba(0, 0, 0, 0.9);
+}
