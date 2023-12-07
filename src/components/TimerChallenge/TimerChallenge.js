@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { ResultModal } from "../ResultModal";
 import classes from "./TimerChallenge.module.css";
 
-export const TimerChallenge = ({title, targetTime}) => {
+export const TimerChallenge = ({ title, targetTime }) => {
  const [timeRemaining, setTimeRemaining] = useState(targetTime * 1000);
   const timer = useRef(null);
   const dialog = useRef(null);
@@ -11,7 +11,6 @@ export const TimerChallenge = ({title, targetTime}) => {
 
   if (timeRemaining <= 0) {
     clearInterval(timer.current);
-
     dialog.current.open();
   }
 
